@@ -181,6 +181,19 @@ class LocationSearchViewModelTest {
     }
 
     @Test
+    fun `typing shows in the query before the debounce elapses`() = runTest {
+        val viewModel = viewModel()
+
+        viewModel.uiState.test {
+            skipItems(1)
+            viewModel.onQueryChange("S")
+            testScheduler.runCurrent()
+
+            assertEquals("S", expectMostRecentItem().query)
+        }
+    }
+
+    @Test
     fun `query survives process death`() = runTest {
         val viewModel = viewModel(SavedStateHandle(mapOf("query" to "Syd")))
 

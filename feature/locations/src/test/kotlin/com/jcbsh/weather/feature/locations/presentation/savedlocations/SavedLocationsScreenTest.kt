@@ -46,7 +46,9 @@ class SavedLocationsScreenTest {
     fun `add button opens Location Search`() {
         setContent(SavedLocationsUiState.Empty)
 
-        composeRule.onNodeWithText(context.getString(R.string.saved_locations_add)).performClick()
+        // The FAB's label is not merged into its clickable node, so target the label itself.
+        composeRule.onNodeWithText(context.getString(R.string.saved_locations_add), useUnmergedTree = true)
+            .performClick()
 
         assertEquals(1, addClicks)
     }
@@ -65,7 +67,7 @@ class SavedLocationsScreenTest {
 
         composeRule.onNodeWithText("New South Wales, Australia").assertExists()
         // Singapore has no region: its name and its country line are both just "Singapore".
-        composeRule.onAllNodesWithText("Singapore").assertCountEquals(2)
+        composeRule.onAllNodesWithText("Singapore", useUnmergedTree = true).assertCountEquals(2)
     }
 
     @Test

@@ -21,6 +21,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.util.Locale
@@ -55,6 +56,8 @@ class LocationSearchViewModel @Inject constructor(
                 }
             }
         }
+        // debounce holds back the first value; start Idle so uiState updates straight away.
+        .onStart { emit(SearchResults.Idle) }
 
     val uiState: StateFlow<LocationSearchUiState> = combine(
         query,
