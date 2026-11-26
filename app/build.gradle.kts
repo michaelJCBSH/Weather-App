@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.weather.android.application)
     alias(libs.plugins.weather.android.compose)
     alias(libs.plugins.weather.hilt)
-    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -29,11 +28,12 @@ android {
 
 dependencies {
     implementation(projects.core.common)
+    implementation(projects.core.data)
+    implementation(projects.feature.locations)
     implementation(projects.design)
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.kotlinx.serialization.json)
     implementation(libs.timber)
 }

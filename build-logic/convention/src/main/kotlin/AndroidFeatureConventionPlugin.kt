@@ -23,6 +23,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             "implementation"(libs.library("androidx-navigation-compose"))
             "implementation"(libs.library("kotlinx-serialization-json"))
             "testImplementation"(project(":core:testing"))
+            "testImplementation"(libs.library("androidx-compose-ui-test-junit4"))
+            "debugImplementation"(libs.library("androidx-compose-ui-test-manifest"))
             "testImplementation"(libs.library("kotlinx-coroutines-test"))
             "testImplementation"(libs.library("robolectric"))
             "testImplementation"(libs.library("turbine"))

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Saved Locations -->
+    <string name="saved_locations_title">Saved locations</string>
+    <string name="saved_locations_add">Add location</string>
+    <string name="saved_locations_empty_title">No saved locations yet</string>
+    <string name="saved_locations_empty_body">Tap Add location to find a place and save it here.</string>
+    <string name="saved_locations_error">Couldn\'t load your saved locations.</string>
+    <string name="saved_locations_delete_action">Delete</string>
+    <string name="saved_locations_remove_title">Remove %1$s?</string>
+    <string name="saved_locations_remove_body">It will no longer appear in your saved locations.</string>
+    <string name="saved_locations_remove_confirm">Remove</string>
+    <string name="saved_locations_remove_cancel">Cancel</string>
+
+    <!-- Location Search -->
+    <string name="location_search_title">Add location</string>
+    <string name="location_search_back">Back</string>
+    <string name="location_search_placeholder">Search for a place</string>
+    <string name="location_search_clear">Clear search</string>
+    <plurals name="location_search_hint">
+        <item quantity="one">Type at least %1$d letter to search.</item>
+        <item quantity="other">Type at least %1$d letters to search.</item>
+    </plurals>
+    <string name="location_search_no_results">No places match “%1$s”.</string>
+    <string name="location_search_error">Couldn\'t search. Check your connection and try again.</string>
+    <string name="location_search_retry">Retry</string>
+    <string name="location_search_saved">Saved</string>
+    <string name="location_search_save_failed">Couldn\'t save this place. Try again.</string>
+</resources>
