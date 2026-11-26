@@ -12,6 +12,10 @@ _Avoid_: Place, city, spot, area
 A Location the user has chosen to keep in their list for quick access.
 _Avoid_: Favourite, bookmark, pinned city
 
+**Location Search**:
+The screen where the user types a place name, sees matching Locations from Open-Meteo geocoding, and picks one to save as a Saved Location. Only geocoding results can be saved, never free text.
+_Avoid_: City search, add city, place picker
+
 **Current Location**:
 The device's own position, resolved from GPS/network and reverse-labelled for display. Never stored in the Saved Location list.
 _Avoid_: My location, GPS location, here
