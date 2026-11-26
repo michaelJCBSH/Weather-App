@@ -1,9 +1,9 @@
 package com.jcbsh.weather.core.data.mapper
 
+import com.jcbsh.weather.core.data.testdata.TestLocations
 import com.jcbsh.weather.core.database.entity.SavedLocationEntity
 import com.jcbsh.weather.core.domain.model.SavedLocation
 import com.jcbsh.weather.core.network.dto.GeocodingResultDto
-import com.jcbsh.weather.core.testing.data.TestLocations
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

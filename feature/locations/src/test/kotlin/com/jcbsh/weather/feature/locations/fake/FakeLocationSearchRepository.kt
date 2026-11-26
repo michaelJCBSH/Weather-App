@@ -1,4 +1,4 @@
-package com.jcbsh.weather.core.testing.fake
+package com.jcbsh.weather.feature.locations.fake
 
 import com.jcbsh.weather.core.domain.model.Location
 import com.jcbsh.weather.core.domain.repository.LocationSearchRepository

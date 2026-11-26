@@ -4,9 +4,9 @@ import app.cash.turbine.test
 import com.jcbsh.weather.core.domain.model.SavedLocation
 import com.jcbsh.weather.core.domain.result.DataError
 import com.jcbsh.weather.core.testing.MainDispatcherRule
-import com.jcbsh.weather.core.testing.data.TestLocations
-import com.jcbsh.weather.core.testing.fake.FakeSavedLocationRepository
-import com.jcbsh.weather.core.testing.fake.RecordingLogger
+import com.jcbsh.weather.feature.locations.fake.FakeSavedLocationRepository
+import com.jcbsh.weather.feature.locations.fake.RecordingLogger
+import com.jcbsh.weather.feature.locations.testdata.TestLocations
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals

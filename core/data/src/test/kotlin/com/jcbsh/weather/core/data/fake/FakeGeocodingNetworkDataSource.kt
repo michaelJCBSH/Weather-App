@@ -1,4 +1,4 @@
-package com.jcbsh.weather.core.testing.fake
+package com.jcbsh.weather.core.data.fake
 
 import com.jcbsh.weather.core.network.dto.GeocodingResultDto
 import com.jcbsh.weather.core.network.geocoding.GeocodingNetworkDataSource

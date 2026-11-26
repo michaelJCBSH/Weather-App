@@ -11,9 +11,9 @@ import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.core.app.ApplicationProvider
-import com.jcbsh.weather.core.testing.data.TestLocations
 import com.jcbsh.weather.design.WeatherThemeForPreview
 import com.jcbsh.weather.feature.locations.R
+import com.jcbsh.weather.feature.locations.testdata.TestLocations
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule

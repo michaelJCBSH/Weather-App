@@ -1,8 +1,8 @@
 package com.jcbsh.weather.feature.locations.presentation.locationsearch
 
-import com.jcbsh.weather.core.testing.data.TestLocations
 import com.jcbsh.weather.core.testing.snapshotAllVariants
 import com.jcbsh.weather.core.testing.weatherPaparazzi
+import com.jcbsh.weather.feature.locations.testdata.TestLocations
 import org.junit.Rule
 import org.junit.Test
 

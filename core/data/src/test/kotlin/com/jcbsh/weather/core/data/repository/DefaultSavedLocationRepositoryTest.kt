@@ -1,12 +1,12 @@
 package com.jcbsh.weather.core.data.repository
 
 import app.cash.turbine.test
+import com.jcbsh.weather.core.data.fake.FakeSavedLocationDao
+import com.jcbsh.weather.core.data.fake.RecordingLogger
+import com.jcbsh.weather.core.data.testdata.TestLocations
 import com.jcbsh.weather.core.domain.model.SavedLocation
 import com.jcbsh.weather.core.domain.result.DataError
 import com.jcbsh.weather.core.domain.result.DataResult
-import com.jcbsh.weather.core.testing.data.TestLocations
-import com.jcbsh.weather.core.testing.fake.FakeSavedLocationDao
-import com.jcbsh.weather.core.testing.fake.RecordingLogger
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Test

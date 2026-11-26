@@ -1,4 +1,4 @@
-package com.jcbsh.weather.core.testing.data
+package com.jcbsh.weather.core.data.testdata
 
 import com.jcbsh.weather.core.domain.model.Location
 
@@ -12,17 +12,6 @@ object TestLocations {
         countryCode = "US",
         latitude = 37.21533,
         longitude = -93.29824,
-        timezone = "America/Chicago",
-    )
-
-    val SpringfieldIllinois = Location(
-        id = 4250542,
-        name = "Springfield",
-        region = "Illinois",
-        country = "United States",
-        countryCode = "US",
-        latitude = 39.80172,
-        longitude = -89.64371,
         timezone = "America/Chicago",
     )
 

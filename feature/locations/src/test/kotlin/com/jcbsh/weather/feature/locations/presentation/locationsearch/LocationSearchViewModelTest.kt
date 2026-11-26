@@ -6,9 +6,9 @@ import com.jcbsh.weather.core.domain.model.SavedLocation
 import com.jcbsh.weather.core.domain.result.DataError
 import com.jcbsh.weather.core.domain.result.DataResult
 import com.jcbsh.weather.core.testing.MainDispatcherRule
-import com.jcbsh.weather.core.testing.data.TestLocations
-import com.jcbsh.weather.core.testing.fake.FakeLocationSearchRepository
-import com.jcbsh.weather.core.testing.fake.FakeSavedLocationRepository
+import com.jcbsh.weather.feature.locations.fake.FakeLocationSearchRepository
+import com.jcbsh.weather.feature.locations.fake.FakeSavedLocationRepository
+import com.jcbsh.weather.feature.locations.testdata.TestLocations
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceTimeBy

@@ -13,10 +13,6 @@ android {
 }
 
 dependencies {
-    api(projects.core.common)
-    api(projects.core.database)
-    api(projects.core.domain)
-    api(projects.core.network)
     api(projects.design)
     api(libs.junit4)
     api(libs.kotlinx.coroutines.test)

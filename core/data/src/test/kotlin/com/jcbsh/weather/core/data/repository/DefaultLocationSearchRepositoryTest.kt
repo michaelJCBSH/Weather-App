@@ -1,11 +1,11 @@
 package com.jcbsh.weather.core.data.repository
 
+import com.jcbsh.weather.core.data.fake.FakeGeocodingNetworkDataSource
+import com.jcbsh.weather.core.data.fake.RecordingLogger
+import com.jcbsh.weather.core.data.testdata.TestLocations
 import com.jcbsh.weather.core.domain.result.DataError
 import com.jcbsh.weather.core.domain.result.DataResult
 import com.jcbsh.weather.core.network.dto.GeocodingResultDto
-import com.jcbsh.weather.core.testing.data.TestLocations
-import com.jcbsh.weather.core.testing.fake.FakeGeocodingNetworkDataSource
-import com.jcbsh.weather.core.testing.fake.RecordingLogger
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest

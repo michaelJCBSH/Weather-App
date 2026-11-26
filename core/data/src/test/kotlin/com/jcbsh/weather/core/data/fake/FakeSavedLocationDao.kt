@@ -1,4 +1,4 @@
-package com.jcbsh.weather.core.testing.fake
+package com.jcbsh.weather.core.data.fake
 
 import com.jcbsh.weather.core.database.dao.SavedLocationDao
 import com.jcbsh.weather.core.database.entity.SavedLocationEntity

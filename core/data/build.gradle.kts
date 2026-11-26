@@ -14,6 +14,6 @@ dependencies {
     implementation(projects.core.network)
     implementation(libs.retrofit)
 
-    testImplementation(projects.core.testing)
+    testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.turbine)
 }

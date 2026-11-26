@@ -12,9 +12,9 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.test.core.app.ApplicationProvider
 import com.jcbsh.weather.core.domain.model.Location
-import com.jcbsh.weather.core.testing.data.TestLocations
 import com.jcbsh.weather.design.WeatherThemeForPreview
 import com.jcbsh.weather.feature.locations.R
+import com.jcbsh.weather.feature.locations.testdata.TestLocations
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
