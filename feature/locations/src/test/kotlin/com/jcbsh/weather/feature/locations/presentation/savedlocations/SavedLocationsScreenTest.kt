@@ -3,14 +3,13 @@ package com.jcbsh.weather.feature.locations.presentation.savedlocations
 import android.content.Context
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.hasAnyDescendant
 import androidx.compose.ui.test.hasText
-import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import androidx.compose.ui.test.performSemanticsAction
 import androidx.test.core.app.ApplicationProvider
 import com.jcbsh.weather.core.testing.data.TestLocations
 import com.jcbsh.weather.design.WeatherThemeForPreview
@@ -99,10 +98,11 @@ class SavedLocationsScreenTest {
 
     private fun deleteViaAccessibilityAction(name: String) {
         val deleteLabel = context.getString(R.string.saved_locations_delete_action)
-        composeRule
+        val row = composeRule
             .onNode(SemanticsMatcher.keyIsDefined(SemanticsActions.CustomActions) and hasAnyDescendant(hasText(name)))
-            .performSemanticsAction(SemanticsActions.CustomActions) { actions ->
-                actions.first { it.label == deleteLabel }.action()
-            }
+            .fetchSemanticsNode()
+        composeRule.runOnUiThread {
+            row.config[SemanticsActions.CustomActions].first { it.label == deleteLabel }.action()
+        }
     }
 }

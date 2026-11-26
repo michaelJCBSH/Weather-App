@@ -254,11 +254,11 @@ private fun LocationSearchContentPreview() {
                 results = SearchResults.Content(
                     listOf(
                         SearchResult(
-                            Location(1, "Springfield", "Missouri", "United States", "US", 37.2, -93.3, null),
+                            Location(1, "Springfield", "Missouri", "United States", "US", 0.0, 0.0, null),
                             isSaved = true,
                         ),
                         SearchResult(
-                            Location(2, "Springfield", "Illinois", "United States", "US", 39.8, -89.6, null),
+                            Location(2, "Springfield", "Illinois", "United States", "US", 0.0, 0.0, null),
                             isSaved = false,
                         ),
                     ),

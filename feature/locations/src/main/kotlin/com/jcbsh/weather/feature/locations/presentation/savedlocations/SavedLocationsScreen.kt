@@ -278,8 +278,8 @@ private fun SavedLocationsContentPreview() {
         SavedLocationsScreen(
             uiState = SavedLocationsUiState.Content(
                 listOf(
-                    Location(1, "Sydney", "New South Wales", "Australia", "AU", -33.87, 151.21, "Australia/Sydney"),
-                    Location(2, "Singapore", null, "Singapore", "SG", 1.29, 103.85, "Asia/Singapore"),
+                    Location(1, "Sydney", "New South Wales", "Australia", "AU", 0.0, 0.0, "Australia/Sydney"),
+                    Location(2, "Singapore", null, "Singapore", "SG", 0.0, 0.0, "Asia/Singapore"),
                 ),
             ),
             onAddLocation = {},
