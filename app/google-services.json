@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "470070080381",
+    "project_id": "weather-app-jcbsh",
+    "storage_bucket": "weather-app-jcbsh.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470070080381:android:a7d636de21971a47df5214",
+        "android_client_info": {
+          "package_name": "com.jcbsh.weather"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDakj32g63T9LllK69G1r_C90Iglb8DLfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
