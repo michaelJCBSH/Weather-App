@@ -51,7 +51,7 @@ core/location/       Fused Location Provider wrapper, permission state
 core/data/           Repository implementations (combine network + database)
 core/domain/         Domain models, repository interfaces, DataResult, use cases (pure Kotlin)
 core/common/         Logger, dispatcher qualifiers, shared utilities
-core/testing/        Fakes, test rules, JSON fixtures
+core/testing/        Shared test infrastructure: rules and snapshot helpers (no fakes or sample data)
 design/              WeatherTheme, tokens, reusable components, WeatherCondition → string/icon
 benchmark/           Macrobenchmark + Baseline Profile generator
 build-logic/         Convention plugins (android-library, android-feature, compose, hilt, room, detekt)
@@ -150,9 +150,10 @@ Open-Meteo → `core:network` DTO → mapper → Room entity → repository `Flo
 ## Testing
 
 - Every ViewModel, repository, use case and mapper gets unit tests.
-- Write hand-written fakes in `core:testing` (`FakeForecastRepository`, `FakeLocationDao`) and use them in place of mocking libraries.
+- Write hand-written fakes (`FakeSavedLocationRepository` in `feature:locations`, `FakeSavedLocationDao` in `core:data`) and use them in place of mocking libraries.
+- Fakes and sample data go in the `src/test` source set of the module that uses them, in `<module package>.fake` and `<module package>.testdata`. When another module needs the same fake or sample data, duplicate it there; don't share it.
 - Test Flows with Turbine and `runTest`; use a `MainDispatcherRule`.
-- Test Retrofit services against MockWebServer with recorded Open-Meteo JSON in `core:testing/src/main/resources/`.
+- Test Retrofit services against MockWebServer with recorded Open-Meteo JSON in `src/test/resources/` of the module that uses it.
 - Every screen state (Loading / Content / Error / Empty) gets a Paparazzi snapshot of the stateless `XxxScreen` in light, dark, 200% font scale and an expanded-width device.
 - Interaction tests use Compose UI tests on Robolectric.
 - Time-dependent code takes a `Clock`; tests pass a fixed one.
