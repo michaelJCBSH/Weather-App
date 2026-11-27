@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.weather.android.compose)
     alias(libs.plugins.weather.hilt)
     alias(libs.plugins.kotlin.serialization)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.google.services)
 }
 
 android {
